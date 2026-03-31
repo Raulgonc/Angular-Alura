@@ -29,13 +29,6 @@
       "conteudo": "Penso, logo existo. Mas o que sou afinal? Uma coisa que pensa — que duvida, que afirma, que nega, que quer, que imagina e que sente. Eis tudo que posso dizer com certeza absoluta sobre mim mesmo.",
       "autoria": "René Descartes",
       "modelo": "modelo2"
-    },
-    {
-      "conteudo": "Amo minha namorada",
-      "autoria": "Raul",
-      "modelo": "modelo3",
-      "id": "hk7CTF1pGvI"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }
