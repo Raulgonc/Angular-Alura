@@ -6,6 +6,13 @@
   padding: 0;
 }
 
+body {
+  background-image: url('assets/imagens/background-completo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .ff-inter { font-family: 'Inter', sans-serif; }
 .ff-roboto-mono { font-family: 'Roboto Mono', monospace; }
 
