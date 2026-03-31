@@ -17,8 +17,8 @@ export class CriarPensamento {
   constructor(private service: PensamentosService, private router: Router) {}
 
   salvar() {
-    this.service.adicionar({ conteudo: this.pensamento, autoria: this.autoria, modelo: this.modelo });
-    this.router.navigate(['/meu-mural']);
+    this.service.adicionar({ conteudo: this.pensamento, autoria: this.autoria, modelo: this.modelo })
+      .subscribe(() => this.router.navigate(['/meu-mural']));
   }
 
   cancelar() {

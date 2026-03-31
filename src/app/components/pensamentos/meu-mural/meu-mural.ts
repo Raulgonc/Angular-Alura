@@ -15,17 +15,11 @@ export class MeuMural implements OnInit {
   constructor(private service: PensamentosService, private router: Router) {}
 
   ngOnInit(): void {
-    this.listaPensamentos = this.service.listar();
+    this.service.listar().subscribe(lista => this.listaPensamentos = lista);
   }
 
   navegarParaCriar() {
     this.router.navigate(['/criar-pensamento']);
-  }
-
-  tamanhoCard(conteudo: string): string {
-    if (conteudo.length > 150) return 'largo';
-    if (conteudo.length > 80) return 'medio';
-    return 'pequeno';
   }
 
   editar(id: number) {
@@ -33,6 +27,14 @@ export class MeuMural implements OnInit {
   }
 
   excluir(id: number) {
-    this.service.excluir(id);
+    this.service.excluir(id).subscribe(() => {
+      this.listaPensamentos = this.listaPensamentos.filter(p => p.id !== id);
+    });
+  }
+
+  tamanhoCard(conteudo: string): string {
+    if (conteudo.length > 150) return 'largo';
+    if (conteudo.length > 80) return 'medio';
+    return 'pequeno';
   }
 }

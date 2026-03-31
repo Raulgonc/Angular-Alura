@@ -21,13 +21,12 @@ export class EditarPensamento implements OnInit {
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    const encontrado = this.service.buscarPorId(id);
-    if (encontrado) this.pensamento = { ...encontrado };
+    this.service.buscarPorId(id).subscribe(p => this.pensamento = { ...p });
   }
 
   salvar() {
-    this.service.atualizar(this.pensamento);
-    this.router.navigate(['/meu-mural']);
+    this.service.atualizar(this.pensamento)
+      .subscribe(() => this.router.navigate(['/meu-mural']));
   }
 
   cancelar() {
