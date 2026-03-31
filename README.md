@@ -1,59 +1,93 @@
-# AngularAlura
+# Angular Alura — Quadro de Pensamentos
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.5.
+Aplicação Angular para gerenciamento de pensamentos — registre, edite e exclua suas ideias em uma dashboard intuitiva.
 
-## Development server
+Projeto desenvolvido durante o curso de Angular da [Alura](https://www.alura.com.br/).
 
-To start a local development server, run:
+---
+
+## Sobre o projeto
+
+O **Quadro de Pensamentos** é uma aplicação CRUD que permite ao usuário organizar suas ideias em um painel visual. O foco é explorar os fundamentos do Angular de forma prática, construindo uma interface funcional e responsiva do zero.
+
+### Funcionalidades
+
+- Registrar novos pensamentos
+- Editar pensamentos existentes
+- Excluir pensamentos
+- Dashboard intuitiva para visualização
+
+---
+
+## Tecnologias
+
+- [Angular](https://angular.dev/) v21
+- [TypeScript](https://www.typescriptlang.org/)
+- Angular Router
+- Angular Forms
+
+---
+
+## Como executar
+
+### Pré-requisitos
+
+- [Node.js](https://nodejs.org/) v18+
+- [Angular CLI](https://angular.dev/tools/cli)
+
+### Instalação
 
 ```bash
-ng serve
+# Clone o repositório
+git clone https://github.com/Raulgonc/Angular-Alura.git
+
+# Acesse o diretório
+cd Angular-Alura
+
+# Instale as dependências
+npm install
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Rodando localmente
 
 ```bash
-ng generate component component-name
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Acesse `http://localhost:4200` no navegador.
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+### Build para produção
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Os arquivos gerados estarão na pasta `dist/`.
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### Testes
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## Estrutura do projeto
 
-```bash
-ng e2e
+```
+src/
+├── app/
+│   ├── app.ts            # Componente raiz
+│   ├── app.routes.ts     # Configuração de rotas
+│   ├── app.config.ts     # Configuração da aplicação
+│   └── app.html          # Template raiz
+├── index.html
+├── main.ts
+└── styles.css
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## Licença
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Projeto desenvolvido para fins educacionais.
