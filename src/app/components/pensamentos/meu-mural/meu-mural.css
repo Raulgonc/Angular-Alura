@@ -17,26 +17,21 @@
 }
 
 .mural {
-  columns: 3;
-  column-gap: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .mural { columns: 2; }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: start;
 }
 
 @media (max-width: 480px) {
-  .mural { columns: 1; }
+  .mural { grid-template-columns: 1fr; }
+  .pensamento.largo { grid-column: span 1; }
 }
 
 .pensamento {
   background-color: #F8F9FE;
-  padding: 1rem;
+  padding: 1.25rem;
   border-radius: 4px;
-  break-inside: avoid;
-  page-break-inside: avoid;
-  margin-bottom: 1.5rem;
-  overflow: hidden;
 }
 
 .pensamento img {
@@ -44,15 +39,18 @@
 }
 
 .pensamento.largo {
-  font-size: 1.1rem;
+  grid-column: span 2;
 }
 
 .pensamento.medio {
-  font-size: 0.95rem;
+  grid-column: span 1;
 }
 
 .pensamento.pequeno {
-  font-size: 0.85rem;
+  grid-column: span 1;
+  max-width: 220px;
+  padding: 0.75rem;
+  font-size: 0.88rem;
 }
 
 .pensamento .conteudo {
