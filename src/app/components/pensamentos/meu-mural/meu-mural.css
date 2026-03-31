@@ -1,0 +1,79 @@
+.meu-mural {
+  padding: 2rem 0;
+}
+
+.meu-mural h2 {
+  margin-bottom: 1.5rem;
+}
+
+.acoes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.mural-container {
+  background: #C4EDFF;
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.mural {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.pensamento {
+  background-color: #F8F9FE;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.pensamento img {
+  width: 40px;
+}
+
+.pensamento .conteudo {
+  margin: 1rem auto;
+  word-wrap: break-word;
+}
+
+.pensamento .autoria {
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.modelo1 { box-shadow: 8px 8px 0px #154580; }
+.modelo2 { box-shadow: 8px 8px 0px #6BD1FF; }
+.modelo3 { box-shadow: 8px 8px 0px #84EEC1; }
+
+.acoes-card {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.btn-icone {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+}
+
+.btn-icone:hover {
+  opacity: 0.7;
+}
+
+.btn-icone img {
+  width: 20px;
+  height: 20px;
+}
+
+.sem-pensamentos {
+  text-align: center;
+  padding: 2rem 0 5rem;
+}

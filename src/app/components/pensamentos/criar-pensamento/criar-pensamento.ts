@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { PensamentosService } from '../pensamentos';
 
 @Component({
   selector: 'app-criar-pensamento',
@@ -12,7 +14,10 @@ export class CriarPensamento {
   autoria = '';
   modelo = 'modelo1';
 
+  constructor(private service: PensamentosService, private router: Router) {}
+
   salvar() {
-    console.log({ pensamento: this.pensamento, autoria: this.autoria, modelo: this.modelo });
+    this.service.adicionar({ conteudo: this.pensamento, autoria: this.autoria, modelo: this.modelo });
+    this.router.navigate(['/meu-mural']);
   }
 }

@@ -1,1 +1,32 @@
-<p>meu-mural works!</p>
+<section class="meu-mural container ff-inter">
+  <h2>Meu Mural</h2>
+  <div class="acoes">
+    <button (click)="navegarParaCriar()" class="botao">Adicionar Pensamento</button>
+  </div>
+
+  @if (listaPensamentos.length > 0) {
+    <div class="mural-container">
+      <div class="mural">
+        @for (pensamento of listaPensamentos; track pensamento.id) {
+          <div class="pensamento {{ pensamento.modelo }}">
+            <img src="assets/imagens/{{ pensamento.modelo }}.png" alt="Modelo {{ pensamento.modelo }}" />
+            <div class="conteudo">{{ pensamento.conteudo }}</div>
+            <div class="autoria">{{ pensamento.autoria }}</div>
+            <div class="acoes-card">
+              <button class="btn-icone" (click)="editar(pensamento.id!)" title="Editar">
+                <img src="assets/imagens/icone-editar.png" alt="Editar" />
+              </button>
+              <button class="btn-icone" (click)="excluir(pensamento.id!)" title="Excluir">
+                <img src="assets/imagens/icone-excluir.png" alt="Excluir" />
+              </button>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  } @else {
+    <div class="sem-pensamentos">
+      <p>Nenhum pensamento cadastrado ainda.</p>
+    </div>
+  }
+</section>
