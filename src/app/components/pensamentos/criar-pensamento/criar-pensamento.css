@@ -58,7 +58,26 @@
 .modelos {
   display: flex;
   gap: 2.5rem;
-  border: 1px solid red;
+  flex-wrap: wrap;
+}
+
+.modelo-opcao {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.modelo-opcao:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.modelo-opcao.selecionado {
+  border-color: #154580;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .modelo {
@@ -93,43 +112,19 @@
   box-shadow: 8px 8px 0px #84EEC1;
 }
 
-input[type='radio'] {
-  display: none;
-}
-
-.radio-modelo label {
+.radio-modelo {
   display: flex;
   align-items: center;
-  column-gap: 20px;
-}
-
-.custom-radio {
-  border: 1px solid #154580;
-  width: 30px;
-  height: 30px;
-  display: grid;
-  place-content: center;
-  border-radius: 50%;
-}
-
-.custom-radio,
-span {
-  transition: 0.5s ease;
+  gap: 8px;
+  cursor: pointer;
   color: #154580;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
-.custom-radio span {
-  content: '';
+.radio-modelo input[type='radio'] {
+  accent-color: #154580;
   width: 18px;
   height: 18px;
-  background: transparent;
-  border-radius: 50%;
-}
-
-input[type='radio']:checked+.custom-radio {
-  border-color: #154580;
-}
-
-input[type='radio']:checked+.custom-radio span {
-  background: #154580;
+  cursor: pointer;
 }

@@ -1,0 +1,73 @@
+<section class="criar-pensamentos container ff-inter">
+  <h2>Adicione um pensamento novo.</h2>
+
+  <form (ngSubmit)="salvar()">
+    <label for="pensamento">Pensamento</label>
+    <textarea
+      class="textarea"
+      id="pensamento"
+      name="pensamento"
+      placeholder="Digite seu pensamento."
+      rows="3"
+      [(ngModel)]="pensamento"
+    ></textarea>
+
+    <label for="autoria">Autor(a) ou Fonte</label>
+    <input
+      class="input"
+      type="text"
+      id="autoria"
+      name="autoria"
+      placeholder="Insira o nome do(a) autor(a) ou fonte."
+      [(ngModel)]="autoria"
+    />
+
+    <label>Selecione o modelo do card:</label>
+
+    <div class="modelos">
+      <div class="modelo-opcao" [class.selecionado]="modelo === 'modelo1'">
+        <label class="radio-modelo">
+          <input type="radio" name="modelo" value="modelo1" [(ngModel)]="modelo" />
+          Modelo 1
+        </label>
+        <span>Prévia:</span>
+        <div class="modelo modelo1">
+          <img src="assets/imagens/modelo1.png" alt="Modelo 1" />
+          <div class="conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+          <div class="autoria">- Autor</div>
+        </div>
+      </div>
+
+      <div class="modelo-opcao" [class.selecionado]="modelo === 'modelo2'">
+        <label class="radio-modelo">
+          <input type="radio" name="modelo" value="modelo2" [(ngModel)]="modelo" />
+          Modelo 2
+        </label>
+        <span>Prévia:</span>
+        <div class="modelo modelo2">
+          <img src="assets/imagens/modelo2.png" alt="Modelo 2" />
+          <div class="conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+          <div class="autoria">- Autor</div>
+        </div>
+      </div>
+
+      <div class="modelo-opcao" [class.selecionado]="modelo === 'modelo3'">
+        <label class="radio-modelo">
+          <input type="radio" name="modelo" value="modelo3" [(ngModel)]="modelo" />
+          Modelo 3
+        </label>
+        <span>Prévia:</span>
+        <div class="modelo modelo3">
+          <img src="assets/imagens/modelo3.png" alt="Modelo 3" />
+          <div class="conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+          <div class="autoria">- Autor</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="acoes">
+      <button class="botao" type="submit">Salvar</button>
+      <button class="botao" type="button">Cancelar</button>
+    </div>
+  </form>
+</section>
