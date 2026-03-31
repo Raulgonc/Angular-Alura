@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { Pensamento } from '../pensamento';
 import { PensamentosService } from '../pensamentos';
@@ -12,23 +12,34 @@ import { PensamentosService } from '../pensamentos';
 export class MeuMural implements OnInit {
   listaPensamentos: Pensamento[] = [];
 
-  constructor(private service: PensamentosService, private router: Router) {}
+  constructor(
+    private service: PensamentosService,
+    private router: Router,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
-    this.service.listar().subscribe(lista => this.listaPensamentos = lista);
+    this.service.listar().subscribe({
+      next: lista => {
+        this.listaPensamentos = [...lista];
+        this.cdr.detectChanges();
+      },
+      error: err => console.error('Erro ao carregar pensamentos:', err)
+    });
   }
 
   navegarParaCriar() {
     this.router.navigate(['/criar-pensamento']);
   }
 
-  editar(id: number) {
+  editar(id: number | string) {
     this.router.navigate(['/editar-pensamento', id]);
   }
 
-  excluir(id: number) {
+  excluir(id: number | string) {
     this.service.excluir(id).subscribe(() => {
       this.listaPensamentos = this.listaPensamentos.filter(p => p.id !== id);
+      this.cdr.detectChanges();
     });
   }
 

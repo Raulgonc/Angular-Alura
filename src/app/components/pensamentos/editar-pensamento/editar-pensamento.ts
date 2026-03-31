@@ -20,7 +20,7 @@ export class EditarPensamento implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    const id = this.route.snapshot.paramMap.get('id')!;
     this.service.buscarPorId(id).subscribe(p => this.pensamento = { ...p });
   }
 

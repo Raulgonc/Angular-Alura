@@ -19,7 +19,7 @@ export class PensamentosService {
     return this.http.post<Pensamento>(this.url, pensamento);
   }
 
-  buscarPorId(id: number): Observable<Pensamento> {
+  buscarPorId(id: number | string): Observable<Pensamento> {
     return this.http.get<Pensamento>(`${this.url}/${id}`);
   }
 
@@ -27,7 +27,7 @@ export class PensamentosService {
     return this.http.put<Pensamento>(`${this.url}/${pensamento.id}`, pensamento);
   }
 
-  excluir(id: number): Observable<void> {
+  excluir(id: number | string): Observable<void> {
     return this.http.delete<void>(`${this.url}/${id}`);
   }
 }

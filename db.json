@@ -1,9 +1,41 @@
 {
   "pensamentos": [
-    { "id": 1, "conteudo": "O homem que tem um porquê para viver pode suportar quase qualquer como. A dor faz parte da existência, e é através dela que nos tornamos o que somos. Sem sofrimento, não há grandeza possível.", "autoria": "Friedrich Nietzsche", "modelo": "modelo1" },
-    { "id": 2, "conteudo": "Só sei que nada sei — e é isso que me diferencia: ao menos conheço minha ignorância.", "autoria": "Sócrates", "modelo": "modelo2" },
-    { "id": 3, "conteudo": "O caráter é o destino do homem.", "autoria": "Heráclito", "modelo": "modelo3" },
-    { "id": 4, "conteudo": "A felicidade é o sentido e o propósito da vida, o objetivo e o fim da existência humana.", "autoria": "Aristóteles", "modelo": "modelo1" },
-    { "id": 5, "conteudo": "Penso, logo existo. Mas o que sou afinal? Uma coisa que pensa — que duvida, que afirma, que nega, que quer, que imagina e que sente. Eis tudo que posso dizer com certeza absoluta sobre mim mesmo.", "autoria": "René Descartes", "modelo": "modelo2" }
-  ]
+    {
+      "id": "1",
+      "conteudo": "O homem que tem um porquê para viver pode suportar quase qualquer como. A dor faz parte da existência, e é através dela que nos tornamos o que somos. Sem sofrimento, não há grandeza possível.",
+      "autoria": "Friedrich Nietzsche",
+      "modelo": "modelo1"
+    },
+    {
+      "id": "2",
+      "conteudo": "Só sei que nada sei — e é isso que me diferencia: ao menos conheço minha ignorância.",
+      "autoria": "Sócrates",
+      "modelo": "modelo2"
+    },
+    {
+      "id": "3",
+      "conteudo": "O caráter é o destino do homem.",
+      "autoria": "Heráclito",
+      "modelo": "modelo3"
+    },
+    {
+      "id": "4",
+      "conteudo": "A felicidade é o sentido e o propósito da vida, o objetivo e o fim da existência humana.",
+      "autoria": "Aristóteles",
+      "modelo": "modelo1"
+    },
+    {
+      "id": "5",
+      "conteudo": "Penso, logo existo. Mas o que sou afinal? Uma coisa que pensa — que duvida, que afirma, que nega, que quer, que imagina e que sente. Eis tudo que posso dizer com certeza absoluta sobre mim mesmo.",
+      "autoria": "René Descartes",
+      "modelo": "modelo2"
+    },
+    {
+      "conteudo": "Amo minha namorada",
+      "autoria": "Raul",
+      "modelo": "modelo3",
+      "id": "hk7CTF1pGvI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
