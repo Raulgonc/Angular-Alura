@@ -20,4 +20,8 @@ export class CriarPensamento {
     this.service.adicionar({ conteudo: this.pensamento, autoria: this.autoria, modelo: this.modelo });
     this.router.navigate(['/meu-mural']);
   }
+
+  cancelar() {
+    this.router.navigate(['/meu-mural']);
+  }
 }
