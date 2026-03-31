@@ -94,6 +94,7 @@
 
 .modelo .autoria {
   word-wrap: break-word;
+  font-weight: bold;
 }
 
 .radio {
